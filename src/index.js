@@ -1,13 +1,13 @@
+require("./bootstrap");
 
-require('./bootstrap')
+const Koa = require("koa");
 
-const Koa = require('koa');
-
-const configService = require('./services/ConfigService');
-const loggerService = require('./services/LoggerService');
-const errorHandler = require('./middleware/errorHandler');
-const loggerHandler = require('./middleware/loggerHandler');
-const router = require('./routes');
+const passportService = require("./services/PassportService");
+const configService = require("./services/ConfigService");
+const loggerService = require("./services/LoggerService");
+const errorHandler = require("./middleware/errorHandler");
+const loggerHandler = require("./middleware/loggerHandler");
+const router = require("./api/routes");
 
 const config = {
   host: configService.host,
@@ -19,6 +19,8 @@ const app = new Koa();
 app.use(errorHandler);
 
 app.use(loggerHandler);
+
+app.use(passportService.initialize());
 
 app.use(router.routes());
 

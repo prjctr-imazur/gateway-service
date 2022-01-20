@@ -26,6 +26,10 @@ class ConfigService {
     return process.env.LOG_LEVEL;
   }
 
+  get jwtSecret() {
+    return process.env.JWT_SECRET;
+  }
+
   get videoServiceUrl() {
     return process.env.VIDEO_SERVICE_URL;
   }
