@@ -7,7 +7,7 @@ const configService = require('./services/ConfigService');
 const loggerService = require('./services/LoggerService');
 const errorHandler = require('./middleware/errorHandler');
 const loggerHandler = require('./middleware/loggerHandler');
-const router = require('./routes');
+const router = require('./api/routes');
 
 const config = {
   host: configService.host,

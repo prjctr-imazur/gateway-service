@@ -26,21 +26,30 @@ class ConfigService {
     return process.env.LOG_LEVEL;
   }
 
-  get videoServiceUrl() {
-    return process.env.VIDEO_SERVICE_URL;
+  get database() {
+    return {
+      host: process.env.DATABASE_HOST,
+      database: process.env.DATABASE_NAME,
+      password: process.env.DATABASE_PASSWORD,
+      username: process.env.DATABASE_USER_NAME,
+    };
   }
 
-  get historyServiceUrl() {
-    return process.env.HISTORY_SERVICE_URL;
-  }
+  // get videoServiceUrl() {
+  //   return process.env.VIDEO_SERVICE_URL;
+  // }
 
-  get subscriptionServiceUrl() {
-    return process.env.SUBSCRIPTION_SERVICE_URL;
-  }
+  // get historyServiceUrl() {
+  //   return process.env.HISTORY_SERVICE_URL;
+  // }
 
-  get userServiceUrl() {
-    return process.env.USER_SERVICE_URL;
-  }
+  // get subscriptionServiceUrl() {
+  //   return process.env.SUBSCRIPTION_SERVICE_URL;
+  // }
+
+  // get userServiceUrl() {
+  //   return process.env.USER_SERVICE_URL;
+  // }
 }
 
 const configService = (function loadConfigService() {
