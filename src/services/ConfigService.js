@@ -34,22 +34,6 @@ class ConfigService {
       username: process.env.DATABASE_USER_NAME,
     };
   }
-
-  // get videoServiceUrl() {
-  //   return process.env.VIDEO_SERVICE_URL;
-  // }
-
-  // get historyServiceUrl() {
-  //   return process.env.HISTORY_SERVICE_URL;
-  // }
-
-  // get subscriptionServiceUrl() {
-  //   return process.env.SUBSCRIPTION_SERVICE_URL;
-  // }
-
-  // get userServiceUrl() {
-  //   return process.env.USER_SERVICE_URL;
-  // }
 }
 
 const configService = (function loadConfigService() {
